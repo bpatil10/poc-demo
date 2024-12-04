@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="header-toolbar">
+    <div class="header-content">
+      <span class="hospital-name">Hospital Name</span>
+      
+      <!-- Desktop Navigation -->
+      <div class="nav-links" [class.show-mobile-menu]="isMenuOpen">
+        <a mat-button routerLink="/home">HOME</a>
+        <a mat-button routerLink="/about">ABOUT US</a>
+        <a mat-button routerLink="/contact">CONTACT</a>
+      </div>
+  
+      <div class="right-section">
+        <!-- Logout Button -->
+        <button mat-button class="logout-btn">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+  
+        <!-- Hamburger Menu Button -->
+        <button mat-icon-button class="menu-button" (click)="toggleMenu()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+  

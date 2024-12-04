@@ -1,0 +1,67 @@
+.header-toolbar {
+  background-color: #7c3aed; // Tailwind's violet-600
+  padding: 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.hospital-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0.5rem 0.5rem;
+    
+    a {
+      color: #1f2937;
+      padding: 0.75rem 1rem;
+      
+      &:hover {
+        background-color: #f3f4f6;
+      }
+    }
+    
+    &.show-mobile-menu {
+      display: flex;
+    }
+  }
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-button {
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
